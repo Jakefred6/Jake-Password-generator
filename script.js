@@ -18,11 +18,11 @@ function generatePassword() {
       return generatePassword(); // Restart the process
     }
   
-    // Custom confirmation prompts for character types
-    var includeLowercase = confirm("Include lowercase characters? (Yes/No)");
-    var includeUppercase = confirm("Include uppercase characters? (Yes/No)");
-    var includeNumeric = confirm("Include numeric characters? (Yes/No)");
-    var includeSpecial = confirm("Include special characters? (Yes/No)");
+    // Prompt for character types
+    var includeLowercase = confirm("Include lowercase characters?");
+    var includeUppercase = confirm("Include uppercase characters?");
+    var includeNumeric = confirm("Include numeric characters?");
+    var includeSpecial = confirm("Include special characters?");
   
     // Validate at least one character type is selected
     if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
@@ -67,3 +67,4 @@ function generatePassword() {
   
   // Add event listener to generate button
   generateBtn.addEventListener("click", writePassword);
+  
