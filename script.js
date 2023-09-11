@@ -1,4 +1,4 @@
-// Function to generate a random password
+// use this to generate random password
 function generatePassword() {
     var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
     var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -7,7 +7,7 @@ function generatePassword() {
   
     var passwordChars = "";
   
-    // Prompt for password length
+    // password length
     var passwordLength = parseInt(prompt("Please Enter Your password length (between 8 and 128 characters):"));
   
     if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
@@ -15,13 +15,13 @@ function generatePassword() {
       return generatePassword(); 
     }
   
-    // Prompt for character types
+    // character types
     var includeLowercase = confirm("Do you want to include lowercase characters?");
     var includeUppercase = confirm("Do you want to include uppercase characters?");
     var includeNumeric = confirm("Do you want to include numeric characters?");
     var includeSpecial = confirm("Do you want to include special characters?");
   
-    // Validate at least one character type is selected
+    //  at least one character type
     if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
       alert("At least one character type must be selected.");
       return generatePassword();
@@ -55,7 +55,7 @@ function generatePassword() {
 
   var generateBtn = document.querySelector("#generate");
   
-  // Write password to the #password input
+  // This is used to write password to the #password input
   function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
